@@ -65,7 +65,23 @@ document.getElementById('calculate').addEventListener('click', function () {
             document.getElementById('output').innerHTML = median;
             break;
     case 'mode':
-       
+        const mode = {};
+        let max = 0, count = 0;
+        for (let i = 0; i < list.length; i++){
+            const itemInList = list[i];
+
+            if (list[itemInList]){
+                mode[itemInList]++;
+            } else {
+                mode(itemInList) = 1;
+            }
+
+            if (count < mode(itemInList)){
+                max = itemInList;
+                count = mode(itemInList)
+            }
+        }
+       document.getElementById('output').innerHTML = max
     case 'range':
         var min = list[0];
             var max = list[0];
